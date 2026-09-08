@@ -22,12 +22,21 @@ export default function SiteHeader() {
 
       <div className="shell flex h-[72px] items-center justify-between gap-6 lg:h-[88px]">
         <Link href="/" className="flex min-h-11 shrink-0 items-center gap-3" aria-label={`${business.name} — home`}>
-          <span
+          {/* The supplied WC monogram, replacing the drawn "W" tile that stood in
+              for it. Its paper ground is keyed out, so it sits on `sand` without
+              the slightly-darker box an opaque crop would show (#f4f0e5 paper
+              against a #fdfbf7 band). The wordmark beside it stays: this crop is
+              the mark alone and carries no words, so nothing is set twice.
+              Plain <img> — `output: 'export'` turns the optimizer off, so
+              next/image would emit this element anyway. */}
+          <img
+            src="/images/ward-mark.webp"
+            alt=""
             aria-hidden="true"
-            className="grid h-9 w-9 place-items-center rounded-[10px] bg-teal font-display text-base font-bold text-seafoam"
-          >
-            W
-          </span>
+            width={256}
+            height={149}
+            className="h-8 w-auto shrink-0 lg:h-9"
+          />
           <span className="leading-tight">
             <span className="block font-display text-[17px] font-bold tracking-tight text-teal">
               Ward Garage Door

@@ -22,7 +22,11 @@ export const localBusinessSchema = {
   url: SITE_URL,
   telephone: business.phone,
   email: business.email,
+  // `image` stays a photograph of the work, which is what consumers render as
+  // one. `logo` is the square mark, added with the logo drop-in — the two are
+  // distinct properties and a mark is the wrong thing to show as a photo.
   image: `${SITE_URL}/images/wide-02.webp`,
+  logo: `${SITE_URL}/images/ward-icon.png`,
   address: {
     '@type': 'PostalAddress',
     streetAddress: address.street,

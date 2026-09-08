@@ -11,7 +11,19 @@ export default function SiteFooter() {
     <footer className="bg-teal-deep text-sand">
       <div className="shell grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-4">
-          <span className="font-display text-xl font-bold text-white">{business.name}</span>
+          {/* The full lockup on its own paper, not the keyed mark: the artwork's
+              ink is teal and this band is `teal-deep`, so a transparent mark
+              would disappear into it. Kept as a card on the supplied ground
+              rather than recolouring art we were handed. It reads the business
+              name, so the name is not also set as type beside it — `alt` carries
+              it for anything that cannot see the image. */}
+          <img
+            src="/images/ward-lockup.webp"
+            alt={business.name}
+            width={480}
+            height={363}
+            className="h-auto w-[220px] rounded-xl"
+          />
           <p className="max-w-xs text-sm text-seafoam-wash/70">
             A Gulf Breeze garage door shop. One phone number, published hours, and a
             street address you can drive to.
