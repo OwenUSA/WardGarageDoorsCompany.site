@@ -177,6 +177,24 @@
     background-color: rgb(255 255 255 / 0.1);
   }
 
+  /* Nav pill. The hero'''s "See what we fix" button is .btn-outline sitting on the
+     teal band, so its look is teal ground + white text + a 40% white hairline.
+     The header sits on sand, so that ground has to be painted here rather than
+     inherited — same colours, tightened to nav scale. */
+  .btn-nav {
+    min-height: 2.375rem;
+    padding: 0.5rem 1.125rem;
+    font-size: 0.875rem;
+    background-color: var(--color-teal);
+    border: 1px solid rgb(255 255 255 / 0.4);
+    color: #ffffff;
+  }
+
+  .btn-nav:hover {
+    background-color: var(--color-teal-soft);
+    color: #ffffff;
+  }
+
   .prose-block p {
     margin-block: 0 1.15rem;
   }

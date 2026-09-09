@@ -47,13 +47,9 @@ export default function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-3 lg:flex">
           {ROUTES.map((r) => (
-            <Link
-              key={r.href}
-              href={r.href}
-              className="font-display text-[15px] font-medium text-slate transition-colors hover:text-teal"
-            >
+            <Link key={r.href} href={r.href} className="btn btn-nav">
               {r.label}
             </Link>
           ))}
@@ -83,13 +79,13 @@ export default function SiteHeader() {
         hidden={!open}
         className="border-t border-line bg-sand lg:hidden"
       >
-        <nav aria-label="Primary mobile" className="shell flex flex-col gap-1 py-4">
+        <nav aria-label="Primary mobile" className="shell flex flex-col gap-2 py-4">
           {ROUTES.map((r) => (
             <Link
               key={r.href}
               href={r.href}
               onClick={() => setOpen(false)}
-              className="rounded-xl px-3 py-3 font-display text-base font-medium text-teal"
+              className="btn btn-nav w-full"
             >
               {r.label}
             </Link>
